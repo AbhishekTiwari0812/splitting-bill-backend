@@ -12,7 +12,8 @@ router.register("expense", ExpenseViewSet)
 urlpatterns = [
     path('health', views.health),
     path('friendids', views.get_friend_ids),
-    path('users/(?P<user_id>\d+)/addcontact', views.add_friend_to_network)
+    path('users/(?P<user_id>\d+)/addcontact', views.add_friend_to_network),
+    path('simplify/(?P<group_id>\d+)', views.simplify_cash_flow)
 ]
 
 urlpatterns += router.urls

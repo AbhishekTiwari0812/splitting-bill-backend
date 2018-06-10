@@ -25,7 +25,7 @@ class GroupToUser(models.Model):
 
 
 class Expense(models.Model):
-    amt = models.FloatField()
+    amt = models.IntegerField()
     spender = models.ForeignKey(User, on_delete=models.CASCADE)  # not sure if it's correct
     group = models.ForeignKey(Group, on_delete=models.CASCADE)  # not sure if it's correct
     description = models.CharField(max_length=200, default='No description')
